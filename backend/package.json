@@ -1,7 +1,7 @@
 {
-  "name": "sick-fits-backend",
+  "name": "style-case-backend",
   "version": "1.0.0",
-  "description": "the backend of sick fits",
+  "description": "the backend of style case",
   "scripts": {
     "start": "nodemon -e js,graphql -x node src/index.js",
     "dev": "nodemon -e js,graphql -x node --inspect src/index.js",
