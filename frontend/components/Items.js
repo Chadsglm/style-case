@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import styled from 'styled-components';
@@ -38,15 +38,14 @@ class Items extends Component {
             if (loading) return <p>Loading...</p>;
             if (error) return <p>Error: {error.message}</p>;
             return (
-              <ItemsList>{
-                data.items.map(item => <Item item={item} key={item.id} />)}
-              </ItemsList>
+              <ItemsList>{data.items.map(item => <Item item={item} key={item.id} />)}</ItemsList>
             );
           }}
         </Query>
       </Center>
-    )
+    );
   }
 }
 
 export default Items;
+export { ALL_ITEMS_QUERY };
