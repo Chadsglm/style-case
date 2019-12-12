@@ -62,7 +62,10 @@ class UpdateItem extends Component {
           if (loading) return <p>Loading...</p>;
           if (!data.item) return <p>No Item Found for ID {this.props.id}</p>;
           return (
-            <Mutation mutation={UPDATE_ITEM_MUTATION} variables={this.state}>
+            <Mutation
+              mutation={UPDATE_ITEM_MUTATION}
+              variables={{ id: this.props.id, ...state }}
+            >
               {(updateItem, { loading, error }) => (
                 <Form onSubmit={e => this.updateItem(e, updateItem)}>
                   <Error error={error} />
