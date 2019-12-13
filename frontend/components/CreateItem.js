@@ -30,13 +30,13 @@ class CreateItem extends Component {
   state = {
     title: 'Cool Shoes',
     description: 'I love those shoes',
-    image: 'dog.jpg',
-    largeImage: 'large-dog.jpg',
+    image: 'https://res.cloudinary.com/chadsaglam/image/upload/v1576174863/sample.jpg',
+    largeImage: 'https://res.cloudinary.com/chadsaglam/image/upload/v1576174863/sample.jpg',
     price: 1000,
   };
 
-  handleChange = e => {
-    const { name, type, value } = e.target;
+  handleChange = event => {
+    const { name, type, value } = event.target;
     const val = type === 'number' ? parseFloat(value) : value;
     this.setState({ [name]: val });
   };
