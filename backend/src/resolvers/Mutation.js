@@ -138,7 +138,7 @@ const Mutations = {
 
     // 3. Email them that reset token
     const mailRes = await transport.sendMail({
-      from: 'wes@wesbos.com',
+      from: 'saglam.chd@gmail.com',
       to: user.email,
       subject: 'Your Password Reset Token',
       html: makeANiceEmail(`Your Password Reset Token is here!
@@ -190,11 +190,11 @@ const Mutations = {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365,
     });
-    
+
     // 8. return the new user
     return updatedUser;
   },
-  
+
   async updatePermissions(parent, args, ctx, info) {
     // 1. Check if they are logged in
     if (!ctx.request.userId) {

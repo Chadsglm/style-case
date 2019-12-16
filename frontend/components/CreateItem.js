@@ -28,11 +28,11 @@ const CREATE_ITEM_MUTATION = gql`
 
 class CreateItem extends Component {
   state = {
-    title: 'Cool Shoes',
-    description: 'I love those shoes',
-    image: 'https://res.cloudinary.com/chadsaglam/image/upload/v1576174863/sample.jpg',
-    largeImage: 'https://res.cloudinary.com/chadsaglam/image/upload/v1576174863/sample.jpg',
-    price: 1000,
+    title: 'Cool Case',
+    description: 'I love the that case because you can add your name',
+    image: 'https://res.cloudinary.com/chadsaglam/image/upload/v1576512724/styledesign/jbu8mlxao7ugtsgbaqpu.jpg',
+    largeImage: 'https://res.cloudinary.com/chadsaglam/image/upload/v1576512724/styledesign/jbu8mlxao7ugtsgbaqpu.jpg',
+    price: 2200,
   };
 
   handleChange = event => {
@@ -55,7 +55,7 @@ class CreateItem extends Component {
     
     const file = await res.json();
 
-    console.log(file);
+    // console.log(file);
     
     this.setState({
       image: file.secure_url,
