@@ -1,5 +1,5 @@
 # source: https://eu1.prisma.sh/saglamchd-75a0dd/style-case/dev
-# timestamp: Sun Dec 15 2019 00:30:11 GMT+0100 (Central European Standard Time)
+# timestamp: Mon Dec 16 2019 21:01:20 GMT+0100 (Central European Standard Time)
 
 type AggregateItem {
   count: Int!
@@ -45,8 +45,6 @@ input ItemCreateInput {
   image: String
   largeImage: String
   price: Int!
-  createdAt: DateTime!
-  updatedAt: DateTime!
   user: UserCreateOneInput!
 }
 
@@ -132,8 +130,6 @@ input ItemUpdateInput {
   image: String
   largeImage: String
   price: Int
-  createdAt: DateTime
-  updatedAt: DateTime
   user: UserUpdateOneRequiredInput
 }
 
@@ -143,8 +139,6 @@ input ItemUpdateManyMutationInput {
   image: String
   largeImage: String
   price: Int
-  createdAt: DateTime
-  updatedAt: DateTime
 }
 
 input ItemWhereInput {
