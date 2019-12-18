@@ -9,7 +9,6 @@ import calcTotalPrice from '../lib/calcTotalPrice';
 import Error from './ErrorMessage';
 import User, { CURRENT_USER_QUERY } from './User';
 
-
 const CREATE_ORDER_MUTATION = gql`
   mutation createOrder($token: String!) {
     createOrder(token: $token) {
@@ -29,18 +28,19 @@ function totalItems(cart) {
 }
 
 class TakeMyMoney extends React.Component {
-  onToken = (res, createOrder) => {
+  onToken = async (res, createOrder) => {
     console.log('On Token Called!');
     console.log(res.id);
-    
+
     // manually call the mutation once we have the stripe token
-    createOrder({
+    const order = await createOrder({
       variables: {
         token: res.id,
       },
     }).catch(err => {
       alert(err.message);
     });
+    console.log(order);
   };
 
   render() {
@@ -58,7 +58,7 @@ class TakeMyMoney extends React.Component {
                 amount={calcTotalPrice(me.cart)}
                 name="Style Case"
                 description={`Order of ${totalItems(me.cart)} items!`}
-                image={me.cart[0].item && me.cart[0].item.image}
+                image={me.cart.length && me.cart[0].item && me.cart[0].item.image}
                 stripeKey="pk_test_QaxgbzHm6jJJmZD3oG0KQSeH00rZyyyI9A"
                 currency="EUR"
                 email={me.email}

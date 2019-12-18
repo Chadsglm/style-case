@@ -41,4 +41,4 @@ function createClient({ headers }) {
   });
 }
 
-export default withApollo(createClient);
+export default withApollo(createClient, { getDataFromTree: 'never' });
