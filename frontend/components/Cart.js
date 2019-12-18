@@ -10,6 +10,7 @@ import CloseButton from './styles/CloseButton';
 import StyleButton from './styles/StyleButton';
 import User from './User';
 import CartItem from './CartItem';
+import TakeMyMoney from './TakeMyMoney';
 
 const LOCAL_STATE_QUERY = gql`
   query {
@@ -48,7 +49,9 @@ const Cart = () => (
           <ul>{me.cart.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem} />)}</ul>
           <footer>
             <p>{formatMoney(calcTotalPrice(me.cart))}</p>
-            <StyleButton>Checkout</StyleButton>
+            <TakeMyMoney>
+              <StyleButton>Checkout</StyleButton>
+            </TakeMyMoney>
           </footer>
         </CartStyles>
       );
