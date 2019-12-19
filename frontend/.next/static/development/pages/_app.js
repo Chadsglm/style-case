@@ -3028,6 +3028,23 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+
+/***/ }),
+
 /***/ "./node_modules/@wry/context/lib/context.esm.js":
 /*!******************************************************!*\
   !*** ./node_modules/@wry/context/lib/context.esm.js ***!
@@ -3801,7 +3818,7 @@ var StoreReader = (function () {
         });
     }
     StoreReader.prototype.readQueryFromStore = function (options) {
-        return this.diffQueryAgainstStore(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options, { returnPartialData: false })).result;
+        return this.diffQueryAgainstStore(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options), { returnPartialData: false })).result;
     };
     StoreReader.prototype.diffQueryAgainstStore = function (_a) {
         var store = _a.store, query = _a.query, variables = _a.variables, previousResult = _a.previousResult, _b = _a.returnPartialData, returnPartialData = _b === void 0 ? true : _b, _c = _a.rootId, rootId = _c === void 0 ? 'ROOT_QUERY' : _c, fragmentMatcherFunction = _a.fragmentMatcherFunction, config = _a.config;
@@ -3912,8 +3929,8 @@ var StoreReader = (function () {
                         execContext: execContext,
                     });
                     if (match === 'heuristic' && fragmentExecResult.missing) {
-                        fragmentExecResult = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, fragmentExecResult, { missing: fragmentExecResult.missing.map(function (info) {
-                                return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, info, { tolerable: true });
+                        fragmentExecResult = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, fragmentExecResult), { missing: fragmentExecResult.missing.map(function (info) {
+                                return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, info), { tolerable: true });
                             }) });
                     }
                     objectsToMerge.push(handleMissing(fragmentExecResult));
@@ -4286,7 +4303,7 @@ var StoreWriter = (function () {
         }
         storeObject = store.get(dataId);
         if (!storeObject || !Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_2__["isEqual"])(storeValue, storeObject[storeFieldName])) {
-            store.set(dataId, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, storeObject, (_b = {}, _b[storeFieldName] = storeValue, _b)));
+            store.set(dataId, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, storeObject), (_b = {}, _b[storeFieldName] = storeValue, _b)));
         }
     };
     StoreWriter.prototype.processArrayValue = function (value, generatedId, selectionSet, context) {
@@ -4342,7 +4359,7 @@ function mergeWithGenerated(generatedKey, realKey, cache) {
         }
     });
     cache.delete(generatedKey);
-    var newRealValue = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, generated, real);
+    var newRealValue = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, generated), real);
     if (Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_2__["isEqual"])(newRealValue, real)) {
         return madeChanges;
     }
@@ -4396,7 +4413,7 @@ var OptimisticCacheLayer = (function (_super) {
         return _this;
     }
     OptimisticCacheLayer.prototype.toObject = function () {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.parent.toObject(), this.data);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.parent.toObject()), this.data);
     };
     OptimisticCacheLayer.prototype.get = function (dataId) {
         return hasOwn$1.call(this.data, dataId)
@@ -4414,7 +4431,7 @@ var InMemoryCache = (function (_super) {
         _this.typenameDocumentCache = new Map();
         _this.cacheKeyRoot = new optimism__WEBPACK_IMPORTED_MODULE_3__["KeyTrie"](apollo_utilities__WEBPACK_IMPORTED_MODULE_2__["canUseWeakMap"]);
         _this.silenceBroadcast = false;
-        _this.config = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, defaultConfig, config);
+        _this.config = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, defaultConfig), config);
         if (_this.config.customResolvers) {
              false || ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"].warn('customResolvers have been renamed to cacheRedirects. Please update your config as we will be deprecating customResolvers in the next major version.');
             _this.config.cacheRedirects = _this.config.customResolvers;
@@ -4972,7 +4989,7 @@ var ObservableQuery = (function (_super) {
                 };
             }
             if (queryStoreValue.variables) {
-                this.options.variables = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options.variables, queryStoreValue.variables);
+                this.options.variables = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options.variables), queryStoreValue.variables);
                 this.variables = this.options.variables;
             }
             result = {
@@ -4994,9 +5011,9 @@ var ObservableQuery = (function (_super) {
             };
         }
         if (!partial) {
-            this.updateLastResult(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, result, { stale: false }));
+            this.updateLastResult(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, result), { stale: false }));
         }
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, result, { partial: partial });
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, result), { partial: partial });
     };
     ObservableQuery.prototype.isDifferentFromLastResult = function (newResult) {
         var snapshot = this.lastResultSnapshot;
@@ -5035,17 +5052,17 @@ var ObservableQuery = (function (_super) {
             fetchPolicy = 'network-only';
         }
         if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["isEqual"])(this.variables, variables)) {
-            this.variables = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.variables, variables);
+            this.variables = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.variables), variables);
         }
         if (!Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["isEqual"])(this.options.variables, this.variables)) {
-            this.options.variables = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options.variables, this.variables);
+            this.options.variables = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options.variables), this.variables);
         }
-        return this.queryManager.fetchQuery(this.queryId, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options, { fetchPolicy: fetchPolicy }), FetchType.refetch);
+        return this.queryManager.fetchQuery(this.queryId, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options), { fetchPolicy: fetchPolicy }), FetchType.refetch);
     };
     ObservableQuery.prototype.fetchMore = function (fetchMoreOptions) {
         var _this = this;
          false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(fetchMoreOptions.updateQuery, 'updateQuery option is required. This function defines how to update the query data with the new results.');
-        var combinedOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, (fetchMoreOptions.query ? fetchMoreOptions : Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options, fetchMoreOptions, { variables: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.variables, fetchMoreOptions.variables) })), { fetchPolicy: 'network-only' });
+        var combinedOptions = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, (fetchMoreOptions.query ? fetchMoreOptions : Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options), fetchMoreOptions), { variables: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.variables), fetchMoreOptions.variables) }))), { fetchPolicy: 'network-only' });
         var qid = this.queryManager.generateQueryId();
         return this.queryManager
             .fetchQuery(qid, combinedOptions, FetchType.normal, this.queryId)
@@ -5100,7 +5117,7 @@ var ObservableQuery = (function (_super) {
     };
     ObservableQuery.prototype.setOptions = function (opts) {
         var oldFetchPolicy = this.options.fetchPolicy;
-        this.options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options, opts);
+        this.options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.options), opts);
         if (opts.pollInterval) {
             this.startPolling(opts.pollInterval);
         }
@@ -5191,7 +5208,7 @@ var ObservableQuery = (function (_super) {
             queryManager.startPollingQuery(this.options, queryId);
         }
         var onError = function (error) {
-            _this.updateLastResult(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, _this.lastResult, { errors: error.graphQLErrors, networkStatus: NetworkStatus.error, loading: false }));
+            _this.updateLastResult(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, _this.lastResult), { errors: error.graphQLErrors, networkStatus: NetworkStatus.error, loading: false }));
             iterateObserversSafely(_this.observers, 'error', _this.lastError = error);
         };
         queryManager.observeQuery(queryId, this.options, {
@@ -5433,7 +5450,7 @@ var LocalState = (function () {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_c) {
                 if (document) {
-                    return [2, this.resolveDocument(document, remoteResult.data, context, variables, this.fragmentMatcher, onlyRunForcedResolvers).then(function (localResult) { return (Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, remoteResult, { data: localResult.result })); })];
+                    return [2, this.resolveDocument(document, remoteResult.data, context, variables, this.fragmentMatcher, onlyRunForcedResolvers).then(function (localResult) { return (Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, remoteResult), { data: localResult.result })); })];
                 }
                 return [2, remoteResult];
             });
@@ -5463,7 +5480,7 @@ var LocalState = (function () {
     LocalState.prototype.prepareContext = function (context) {
         if (context === void 0) { context = {}; }
         var cache = this.cache;
-        var newContext = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context, { cache: cache, getCacheKey: function (obj) {
+        var newContext = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context), { cache: cache, getCacheKey: function (obj) {
                 if (cache.config) {
                     return cache.config.dataIdFromObject(obj);
                 }
@@ -5480,7 +5497,7 @@ var LocalState = (function () {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
                 if (document) {
-                    return [2, this.resolveDocument(document, this.buildRootValueFromCache(document, variables) || {}, this.prepareContext(context), variables).then(function (data) { return (Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, variables, data.exportedVariables)); })];
+                    return [2, this.resolveDocument(document, this.buildRootValueFromCache(document, variables) || {}, this.prepareContext(context), variables).then(function (data) { return (Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, variables), data.exportedVariables)); })];
                 }
                 return [2, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, variables)];
             });
@@ -5533,7 +5550,7 @@ var LocalState = (function () {
                 _a = this, cache = _a.cache, client = _a.client;
                 execContext = {
                     fragmentMap: fragmentMap,
-                    context: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context, { cache: cache,
+                    context: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context), { cache: cache,
                         client: client }),
                     variables: variables,
                     fragmentMatcher: fragmentMatcher,
@@ -5613,7 +5630,7 @@ var LocalState = (function () {
                     if (resolverMap) {
                         resolve = resolverMap[aliasUsed ? fieldName : aliasedFieldName];
                         if (resolve) {
-                            resultPromise = Promise.resolve(resolve(rootValue, Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["argumentsObjectFromField"])(field, variables), execContext.context, { field: field }));
+                            resultPromise = Promise.resolve(resolve(rootValue, Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["argumentsObjectFromField"])(field, variables), execContext.context, { field: field, fragmentMap: execContext.fragmentMap }));
                         }
                     }
                 }
@@ -5761,7 +5778,7 @@ var QueryManager = (function () {
                 switch (_f.label) {
                     case 0:
                          false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(mutation, 'mutation option is required. You must specify your GraphQL document in the mutation option.');
-                         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(!fetchPolicy || fetchPolicy === 'no-cache', "fetchPolicy for mutations currently only supports the 'no-cache' policy");
+                         false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(!fetchPolicy || fetchPolicy === 'no-cache', "Mutations only support a 'no-cache' fetchPolicy. If you don't want to disable the cache, remove your fetchPolicy setting to proceed with the default mutation behavior.");
                         mutationId = this.generateQueryId();
                         mutation = this.transform(mutation).document;
                         this.setQuery(mutationId, function () { return ({ document: mutation }); });
@@ -5805,7 +5822,7 @@ var QueryManager = (function () {
                         return [2, new Promise(function (resolve, reject) {
                                 var storeResult;
                                 var error;
-                                self.getObservableFromLink(mutation, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context, { optimisticResponse: optimisticResponse }), variables, false).subscribe({
+                                self.getObservableFromLink(mutation, Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context), { optimisticResponse: optimisticResponse }), variables, false).subscribe({
                                     next: function (result) {
                                         if (Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["graphQLResultHasError"])(result) && errorPolicy === 'none') {
                                             error = new ApolloError({
@@ -5911,7 +5928,7 @@ var QueryManager = (function () {
                         variables = _e.sent();
                         _e.label = 2;
                     case 2:
-                        options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options, { variables: variables });
+                        options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options), { variables: variables });
                         isNetworkOnly = fetchPolicy === 'network-only' || fetchPolicy === 'no-cache';
                         needToFetch = isNetworkOnly;
                         if (!isNetworkOnly) {
@@ -6134,7 +6151,7 @@ var QueryManager = (function () {
         return transformCache.get(document);
     };
     QueryManager.prototype.getVariables = function (document, variables) {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.transform(document).defaultVars, variables);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.transform(document).defaultVars), variables);
     };
     QueryManager.prototype.watchQuery = function (options, shouldSubscribe) {
         if (shouldSubscribe === void 0) { shouldSubscribe = true; }
@@ -6383,7 +6400,7 @@ var QueryManager = (function () {
                 query: serverQuery,
                 variables: variables,
                 operationName: Object(apollo_utilities__WEBPACK_IMPORTED_MODULE_1__["getOperationName"])(serverQuery) || void 0,
-                context: this.prepareContext(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context, { forceFetch: !deduplication })),
+                context: this.prepareContext(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, context), { forceFetch: !deduplication })),
             };
             context = operation.context;
             if (deduplication) {
@@ -6509,7 +6526,7 @@ var QueryManager = (function () {
     };
     QueryManager.prototype.setQuery = function (queryId, updater) {
         var prev = this.getQuery(queryId);
-        var newInfo = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, prev, updater(prev));
+        var newInfo = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, prev), updater(prev));
         this.queries.set(queryId, newInfo);
     };
     QueryManager.prototype.invalidate = function (queryId, invalidated) {
@@ -6521,7 +6538,7 @@ var QueryManager = (function () {
     QueryManager.prototype.prepareContext = function (context) {
         if (context === void 0) { context = {}; }
         var newContext = this.localState.prepareContext(context);
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, newContext, { clientAwareness: this.clientAwareness });
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, newContext), { clientAwareness: this.clientAwareness });
     };
     QueryManager.prototype.checkInFlight = function (queryId) {
         var query = this.queryStore.get(queryId);
@@ -6539,7 +6556,7 @@ var QueryManager = (function () {
                 this.pollingInfoByQueryId.set(queryId, (info = {}));
             }
             info.interval = pollInterval;
-            info.options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options, { fetchPolicy: 'network-only' });
+            info.options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options), { fetchPolicy: 'network-only' });
             var maybeFetch_1 = function () {
                 var info = _this.pollingInfoByQueryId.get(queryId);
                 if (info) {
@@ -6699,7 +6716,7 @@ var DataStore = (function () {
     return DataStore;
 }());
 
-var version = "2.6.4";
+var version = "2.6.8";
 
 var hasSuggestedDevtools = false;
 var ApolloClient = (function () {
@@ -6794,31 +6811,31 @@ var ApolloClient = (function () {
     };
     ApolloClient.prototype.watchQuery = function (options) {
         if (this.defaultOptions.watchQuery) {
-            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.defaultOptions.watchQuery, options);
+            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.defaultOptions.watchQuery), options);
         }
         if (this.disableNetworkFetches &&
             (options.fetchPolicy === 'network-only' ||
                 options.fetchPolicy === 'cache-and-network')) {
-            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options, { fetchPolicy: 'cache-first' });
+            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options), { fetchPolicy: 'cache-first' });
         }
         return this.queryManager.watchQuery(options);
     };
     ApolloClient.prototype.query = function (options) {
         if (this.defaultOptions.query) {
-            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.defaultOptions.query, options);
+            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.defaultOptions.query), options);
         }
          false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_4__["invariant"])(options.fetchPolicy !== 'cache-and-network', 'The cache-and-network fetchPolicy does not work with client.query, because ' +
             'client.query can only return a single result. Please use client.watchQuery ' +
             'to receive multiple results from the cache and the network, or consider ' +
             'using a different fetchPolicy, such as cache-first or network-only.');
         if (this.disableNetworkFetches && options.fetchPolicy === 'network-only') {
-            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options, { fetchPolicy: 'cache-first' });
+            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, options), { fetchPolicy: 'cache-first' });
         }
         return this.queryManager.query(options);
     };
     ApolloClient.prototype.mutate = function (options) {
         if (this.defaultOptions.mutate) {
-            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.defaultOptions.mutate, options);
+            options = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.defaultOptions.mutate), options);
         }
         return this.queryManager.mutate(options);
     };
@@ -8088,7 +8105,7 @@ function getFragmentQueryDocument(document, fragmentName) {
          false ? undefined : Object(ts_invariant__WEBPACK_IMPORTED_MODULE_1__["invariant"])(fragments.length === 1, "Found " + fragments.length + " fragments. `fragmentName` must be provided when there is not exactly 1 fragment.");
         actualFragmentName = fragments[0].name.value;
     }
-    var query = Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, document, { definitions: [
+    var query = Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, document), { definitions: Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__spreadArrays"])([
             {
                 kind: 'OperationDefinition',
                 operation: 'query',
@@ -8105,7 +8122,7 @@ function getFragmentQueryDocument(document, fragmentName) {
                     ],
                 },
             }
-        ].concat(document.definitions) });
+        ], document.definitions) });
     return query;
 }
 
@@ -8223,7 +8240,7 @@ function getDefaultValues(definition) {
             valueToObjectRepresentation(defaultValueObj, variable.name, defaultValue);
             return defaultValueObj;
         });
-        return assign.apply(void 0, [{}].concat(defaultValues));
+        return assign.apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__spreadArrays"])([{}], defaultValues));
     }
     return {};
 }
@@ -8366,7 +8383,7 @@ function addTypenameToDocument(doc) {
                     field.directives.some(function (d) { return d.name.value === 'export'; })) {
                     return;
                 }
-                return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node, { selections: selections.concat([TYPENAME_FIELD]) });
+                return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node), { selections: Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__spreadArrays"])(selections, [TYPENAME_FIELD]) });
             },
         },
     });
@@ -8422,7 +8439,7 @@ function getDirectivesFromDocument(directives, doc) {
                         if (hasDirectivesInSelectionSet(directives, node, false)) {
                             parentPath = currentPath;
                         }
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node, { selections: selectionsWithDirectives });
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node), { selections: selectionsWithDirectives });
                     }
                     else {
                         return null;
@@ -8448,7 +8465,7 @@ function removeArgumentsFromDocument(config, doc) {
     return nullIfDocIsEmpty(Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__["visit"])(doc, {
         OperationDefinition: {
             enter: function (node) {
-                return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node, { variableDefinitions: node.variableDefinitions.filter(function (varDef) {
+                return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node), { variableDefinitions: node.variableDefinitions.filter(function (varDef) {
                         return !config.some(function (arg) { return arg.name === varDef.variable.name.value; });
                     }) });
             },
@@ -8511,7 +8528,7 @@ function buildQueryFromSelectionSet(document) {
     var modifiedDoc = Object(graphql_language_visitor__WEBPACK_IMPORTED_MODULE_0__["visit"])(document, {
         OperationDefinition: {
             enter: function (node) {
-                return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node, { operation: 'query' });
+                return Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])(Object(tslib__WEBPACK_IMPORTED_MODULE_2__["__assign"])({}, node), { operation: 'query' });
             },
         },
     });
@@ -12970,7 +12987,7 @@ for (var i = 0; i < DOMIterables.length; i++) {
 "use strict";
 
 
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/dom-helpers/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
 
 exports.__esModule = true;
 exports.default = addClass;
@@ -13023,23 +13040,6 @@ function replaceClassName(origClass, classToRemove) {
 module.exports = function removeClass(element, className) {
   if (element.classList) element.classList.remove(className);else if (typeof element.className === 'string') element.className = replaceClassName(element.className, className);else element.setAttribute('class', replaceClassName(element.className && element.className.baseVal || '', className));
 };
-
-/***/ }),
-
-/***/ "./node_modules/dom-helpers/node_modules/@babel/runtime/helpers/interopRequireDefault.js":
-/*!***********************************************************************************************!*\
-  !*** ./node_modules/dom-helpers/node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \***********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-module.exports = _interopRequireDefault;
 
 /***/ }),
 
@@ -52798,7 +52798,7 @@ var styled = _styled(StyledComponent, constructWithOptions);
 									code++
 								}
 								// quote tail delimiter is identical to the head delimiter hence noop,
-								// fallthrough clauses have been shited to the correct tail delimiter
+								// fallthrough clauses have been shifted to the correct tail delimiter
 								case DOUBLEQUOTE:
 								case SINGLEQUOTE: {
 									while (caret++ < eol) {
@@ -53131,12 +53131,7 @@ var styled = _styled(StyledComponent, constructWithOptions);
 							break
 						}
 						// quotes
-						case DOUBLEQUOTE: {
-							if (comment === 0) {
-								quote = quote === code ? 0 : (quote === 0 ? code : quote)
-							}
-							break
-						}
+						case DOUBLEQUOTE:
 						case SINGLEQUOTE: {
 							if (comment === 0) {
 								quote = quote === code ? 0 : (quote === 0 ? code : quote)
@@ -53941,18 +53936,8 @@ var styled = _styled(StyledComponent, constructWithOptions);
 				}
 			}
 		}
-
-		switch (out) {
-			case void 0:
-			case false:
-			case true:
-			case null:
-			case content: {
-				break
-			}
-			default: {
-				return out
-			}
+		if (out !== content) {
+		  return out
 		}
 	}
 
@@ -54035,20 +54020,14 @@ var styled = _styled(StyledComponent, constructWithOptions);
 				break
 			}
 			default: {
-				switch (plugin.constructor) {
-					case Array: {
-						for (var i = 0, length = plugin.length; i < length; ++i) {
-							use(plugin[i])
-						}
-						break
+				if (typeof plugin === 'function') {
+					plugins[plugged++] = plugin
+				}	else if (typeof plugin === 'object') {
+					for (var i = 0, length = plugin.length; i < length; ++i) {
+						use(plugin[i])
 					}
-					case Function: {
-						plugins[plugged++] = plugin
-						break
-					}
-					case Boolean: {
-						unkwn = !!plugin|0
-					}
+				} else {
+					unkwn = !!plugin|0
 				}
 			}
  		}
