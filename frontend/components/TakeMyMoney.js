@@ -29,6 +29,7 @@ function totalItems(cart) {
 
 class TakeMyMoney extends React.Component {
   onToken = async (res, createOrder) => {
+    NProgress.start();
     console.log('On Token Called!');
     console.log(res.id);
 
@@ -40,7 +41,11 @@ class TakeMyMoney extends React.Component {
     }).catch(err => {
       alert(err.message);
     });
-    console.log(order);
+    
+    Router.push({
+      pathname: '/order',
+      query: { id: order.data.createOrder.id },
+    });
   };
 
   render() {
@@ -49,8 +54,8 @@ class TakeMyMoney extends React.Component {
         {({ data: { me } }) => (
           <Mutation
             mutation={CREATE_ORDER_MUTATION}
-            refetchQueries={[{ 
-              query: CURRENT_USER_QUERY 
+            refetchQueries={[{
+              query: CURRENT_USER_QUERY
             }]}
           >
             {createOrder => (
