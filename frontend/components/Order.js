@@ -59,7 +59,7 @@ class Order extends React.Component {
               </p>
               <p>
                 <span>Date</span>
-                <span>{format(order.createdAt, 'PPPPpppp')}</span>
+                <span>{order.createdAt}</span>
               </p>
               <p>
                 <span>Order Total</span>
@@ -69,6 +69,7 @@ class Order extends React.Component {
                 <span>Item Count</span>
                 <span>{order.items.length}</span>
               </p>
+              
               <div className="items">
                 {order.items.map(item => (
                   <div className="order-item" key={item.id}>
