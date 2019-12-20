@@ -59,7 +59,7 @@ class Order extends React.Component {
               </p>
               <p>
                 <span>Date</span>
-                <span>{order.createdAt}</span>
+                <span>{format(new Date(order.createdAt), 'PPpp')}</span>
               </p>
               <p>
                 <span>Order Total</span>

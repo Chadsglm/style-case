@@ -56,7 +56,9 @@ class OrderList extends React.Component {
                         <div className="order-meta">
                           <p>{order.items.reduce((a, b) => a + b.quantity, 0)} Items</p>
                           <p>{order.items.length} Products</p>
-                          <p>{order.createdAt}</p>
+                          <p>{formatDistance(new Date(order.createdAt), new Date(), {
+                            addSuffix: true
+                          })}</p>
                           <p>{formatMoney(order.total)}</p>
                         </div>
                         <div className="images">
