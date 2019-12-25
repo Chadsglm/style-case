@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/items.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
 /***/ "./components/AddToCart.js":
 /*!*********************************!*\
@@ -15572,21 +15572,21 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fcihadsaglam%2Fwesbos%2Fstyle-case%2Ffrontend%2Fpages%2Fitems.js!./":
-/*!********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fcihadsaglam%2Fwesbos%2Fstyle-case%2Ffrontend%2Fpages%2Fitems.js ***!
-  \********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fcihadsaglam%2Fwesbos%2Fstyle-case%2Ffrontend%2Fpages%2Findex.js!./":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fcihadsaglam%2Fwesbos%2Fstyle-case%2Ffrontend%2Fpages%2Findex.js ***!
+  \***************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/items", function() {
-      var mod = __webpack_require__(/*! ./pages/items.js */ "./pages/items.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/", function() {
+      var mod = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
       if(true) {
-        module.hot.accept(/*! ./pages/items.js */ "./pages/items.js", function() {
-          if(!next.router.components["/items"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/items.js */ "./pages/items.js")
-          next.router.update("/items", updatedPage)
+        module.hot.accept(/*! ./pages/index.js */ "./pages/index.js", function() {
+          if(!next.router.components["/"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/index.js */ "./pages/index.js")
+          next.router.update("/", updatedPage)
         })
       }
       return mod
@@ -31037,29 +31037,14 @@ var Home = function Home(props) {
 
 /***/ }),
 
-/***/ "./pages/items.js":
-/*!************************!*\
-  !*** ./pages/items.js ***!
-  \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./pages/index.js");
-
-/* harmony default export */ __webpack_exports__["default"] = (_index__WEBPACK_IMPORTED_MODULE_0__["default"]);
-
-/***/ }),
-
-/***/ 3:
-/*!************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fcihadsaglam%2Fwesbos%2Fstyle-case%2Ffrontend%2Fpages%2Fitems.js ***!
-  \************************************************************************************************************************************************/
+/***/ 1:
+/*!*******************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fcihadsaglam%2Fwesbos%2Fstyle-case%2Ffrontend%2Fpages%2Findex.js ***!
+  \*******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fitems&absolutePagePath=%2FUsers%2Fcihadsaglam%2Fwesbos%2Fstyle-case%2Ffrontend%2Fpages%2Fitems.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fitems&absolutePagePath=%2FUsers%2Fcihadsaglam%2Fwesbos%2Fstyle-case%2Ffrontend%2Fpages%2Fitems.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fcihadsaglam%2Fwesbos%2Fstyle-case%2Ffrontend%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fcihadsaglam%2Fwesbos%2Fstyle-case%2Ffrontend%2Fpages%2Findex.js!./");
 
 
 /***/ }),
@@ -31075,5 +31060,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
-//# sourceMappingURL=items.js.map
+},[[1,"static/runtime/webpack.js"]]]);
+//# sourceMappingURL=index.js.map
