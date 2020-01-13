@@ -33,5 +33,8 @@
     "presets": [
       "env"
     ]
+  },
+  "resolutions": {
+    "graphql": "^0.13.2"
   }
 }

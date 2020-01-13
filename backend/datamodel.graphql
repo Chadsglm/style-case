@@ -21,7 +21,7 @@ type User {
 }
 
 type Item {
-  id: ID! @id
+  id: ID! @Unique @id
   title: String!
   description: String!
   image: String
@@ -33,7 +33,7 @@ type Item {
 }
 
 type CartItem {
-  id: ID! @id
+  id: ID! @Unique @id
   quantity: Int! @default(value: 1)
   item: Item # relationship to Item
   user: User! # relationship to User
@@ -42,7 +42,7 @@ type CartItem {
 }
 
 type OrderItem {
-  id: ID! @id
+  id: ID! @Unique @id
   title: String!
   description: String!
   image: String!
@@ -55,7 +55,7 @@ type OrderItem {
 }
 
 type Order {
-  id: ID! @id
+  id: ID! @Unique @id
   items: [OrderItem!]!
   total: Int!
   user: User!
