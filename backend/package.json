@@ -7,7 +7,7 @@
     "dev": "nodemon -e js,graphql -x node --inspect src/index.js",
     "test": "jest",
     "deploy": "prisma deploy --env-file variables.env --force",
-    "build": "[my-framework] build --output public"
+    "build": "build --output public"
   },
   "dependencies": {
     "babel-preset-env": "^1.7.0",
@@ -19,7 +19,7 @@
     "graphql-yoga": "1.16.2",
     "jsonwebtoken": "8.3.0",
     "nodemailer": "^4.6.8",
-    "nodemon": "^2.0.1",
+    "nodemon": "^2.0.2",
     "npm-run-all": "^4.1.5",
     "prisma": "^1.34.10",
     "prisma-binding": "^2.3.16",
