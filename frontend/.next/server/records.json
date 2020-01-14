@@ -1,0 +1,71 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi private-next-pages/_app.js": 0,
+      "multi private-next-pages/_document.js": 1,
+      "multi private-next-pages/index.js": 2,
+      "multi private-next-pages/item.js": 3,
+      "multi private-next-pages/items.js": 4,
+      "multi private-next-pages/order.js": 5,
+      "multi private-next-pages/orders.js": 6,
+      "multi private-next-pages/permissions.js": 7,
+      "multi private-next-pages/reset.js": 8,
+      "multi private-next-pages/sell.js": 9,
+      "multi private-next-pages/signup.js": 10,
+      "multi private-next-pages/update.js": 11,
+      "multi next/dist/pages/_error": 12
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12
+    }
+  },
+  "chunks": {
+    "byName": {
+      "init-server.js": 0,
+      "on-error-server.js": 1,
+      "static/19r89j8odt9o-1o_PeXC0/pages/_app.js": 2,
+      "static/19r89j8odt9o-1o_PeXC0/pages/_document.js": 3,
+      "static/19r89j8odt9o-1o_PeXC0/pages/_error.js": 4,
+      "static/19r89j8odt9o-1o_PeXC0/pages/index.js": 5,
+      "static/19r89j8odt9o-1o_PeXC0/pages/item.js": 6,
+      "static/19r89j8odt9o-1o_PeXC0/pages/items.js": 7,
+      "static/19r89j8odt9o-1o_PeXC0/pages/order.js": 8,
+      "static/19r89j8odt9o-1o_PeXC0/pages/orders.js": 9,
+      "static/19r89j8odt9o-1o_PeXC0/pages/permissions.js": 10,
+      "static/19r89j8odt9o-1o_PeXC0/pages/reset.js": 11,
+      "static/19r89j8odt9o-1o_PeXC0/pages/sell.js": 12,
+      "static/19r89j8odt9o-1o_PeXC0/pages/signup.js": 13,
+      "static/19r89j8odt9o-1o_PeXC0/pages/update.js": 14
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      11,
+      12,
+      13,
+      14,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

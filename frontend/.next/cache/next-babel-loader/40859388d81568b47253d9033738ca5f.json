@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport PleaseSignIn from '../components/PleaseSignIn';\nimport OrderList from '../components/OrderList';\n\nconst OrderPage = props => __jsx(\"div\", null, __jsx(PleaseSignIn, null, __jsx(OrderList, null)));\n\nexport default OrderPage;","map":null,"metadata":{},"sourceType":"module"}

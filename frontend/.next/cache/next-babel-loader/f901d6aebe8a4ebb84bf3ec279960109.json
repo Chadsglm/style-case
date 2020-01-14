@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport Reset from '../components/Reset';\n\nconst Sell = props => __jsx(\"div\", null, __jsx(\"p\", null, \"Reset Your Password \", props.query.resetToken), __jsx(Reset, {\n  resetToken: props.query.resetToken\n}));\n\nexport default Sell;","map":null,"metadata":{},"sourceType":"module"}

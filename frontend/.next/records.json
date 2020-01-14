@@ -1,0 +1,45 @@
+{
+  "modules": {
+    "byIdentifier": {},
+    "usedIds": {}
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/19r89j8odt9o-1o_PeXC0/pages/_app.js": 2,
+      "static/19r89j8odt9o-1o_PeXC0/pages/_error.js": 3,
+      "static/19r89j8odt9o-1o_PeXC0/pages/index.js": 4,
+      "static/19r89j8odt9o-1o_PeXC0/pages/item.js": 5,
+      "static/19r89j8odt9o-1o_PeXC0/pages/items.js": 6,
+      "static/19r89j8odt9o-1o_PeXC0/pages/order.js": 7,
+      "static/19r89j8odt9o-1o_PeXC0/pages/orders.js": 8,
+      "static/19r89j8odt9o-1o_PeXC0/pages/permissions.js": 9,
+      "static/19r89j8odt9o-1o_PeXC0/pages/reset.js": 10,
+      "static/19r89j8odt9o-1o_PeXC0/pages/sell.js": 11,
+      "static/19r89j8odt9o-1o_PeXC0/pages/signup.js": 12,
+      "static/19r89j8odt9o-1o_PeXC0/pages/update.js": 13,
+      "static/runtime/main.js": 14,
+      "static/runtime/polyfills.js": 15
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

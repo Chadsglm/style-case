@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default function calcTotalPrice(cart) {\n  return cart.reduce((tally, cartItem) => {\n    if (!cartItem.item) return tally;\n    return tally + cartItem.quantity * cartItem.item.price;\n  }, 0);\n}","map":null,"metadata":{},"sourceType":"module"}
